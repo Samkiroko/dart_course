@@ -53,14 +53,25 @@ an argument (`List<double>`), and returns the sum of all the values.
 Then, call the function muitiple times with different input values
 (example: `[]`, `[1,2]`,`[1,2,3,4]`) and print the result.
 */
+// void main() {
+//   print(sumOf([1, 2, 3, 4]));
+// }
+
+// double sumOf(List<double> values) {
+//   var sum = 0.0;
+//   for (var value in values) {
+//     sum += value;
+//   }
+//   return sum;
+// }
+
+/* Name and positional arguments */
+/*Use named arguments to improve code readability  */
 void main() {
-  print(sumOf([1, 2, 3, 4]));
+  final person = describe(name: 'Samuel', age: 32);
+  print(person);
 }
 
-double sumOf(List<double> values) {
-  var sum = 0.0;
-  for (var value in values) {
-    sum += value;
-  }
-  return sum;
+String describe({String name, int age}) {
+  return "My name is $name. I'm $age years old";
 }
