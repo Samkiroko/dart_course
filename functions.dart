@@ -35,12 +35,32 @@
 Functions help us to write more maintainable code.
 change the way a function behaves without changing how we call it.
 */
+/* return value */
+// void main() {
+//   final person = describe('Samuel', 32);
+//   print(person);
+// }
 
+// String describe(String name, int age) {
+//   return "My name is $name. I'm $age years old";
+// }
+
+/*
+[Exercise ]Sum of a list of numbers
+write a function called `sum` that takes a list of values as 
+an argument (`List<double>`), and returns the sum of all the values.
+
+Then, call the function muitiple times with different input values
+(example: `[]`, `[1,2]`,`[1,2,3,4]`) and print the result.
+*/
 void main() {
-  final person = describe('Samuel', 32);
-  print(person);
+  print(sumOf([1, 2, 3, 4]));
 }
 
-String describe(String name, int age) {
-  return "My name is $name. I'm $age years old";
+double sumOf(List<double> values) {
+  var sum = 0.0;
+  for (var value in values) {
+    sum += value;
+  }
+  return sum;
 }
