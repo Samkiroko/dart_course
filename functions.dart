@@ -7,11 +7,31 @@
  -Lexical scope & inner functions
  -Avoiding globle mutable state & pure functions
 */
+// void main() {
+//   sayHi();
+// }
+
+// void sayHi() {
+//   print('hi');
+//   print('welcome');
+// }
+
+/* Function arguments*/
+
 void main() {
-  sayHi();
+  const name = 'andrea';
+  const age = 36;
+  describe(name, age);
+  const name2 = 'samuel';
+  const age2 = 32;
+  describe(name2, age2);
 }
 
-void sayHi() {
-  print('hi');
-  print('welcome');
+void describe(String name, int age) {
+  print("My name is $name and I'm $age years old");
 }
+
+/*
+Functions help us to write more maintainable code.
+change the way a function behaves without changing how we call it.
+*/
