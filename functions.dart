@@ -122,4 +122,5 @@ Fat arrow notation(=>)
 /*
 Global mutable state and function with side effects
 */
+
 void main() {}
