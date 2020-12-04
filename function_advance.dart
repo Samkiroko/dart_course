@@ -64,9 +64,22 @@ Generics
 // }
 
 /*Iterable and tolist*/
+// void main() {
+//   const list = [1, 3, 4];
+//   list.forEach(print);
+//   final List<int> double = list.map((value) => value * 2).toList();
+//   print(double);
+// }
+//  NOTE many colletion methods returns iterables
+// use .tolist() to convert to a List
+
+/* The where and firstWhere methods*/
+/*firstWhere*/
+// Get the first item that matches a certain condition
 void main() {
-  const list = [1, 3, 4];
-  list.forEach(print);
-  final List<int> double = list.map((value) => value * 2).toList();
-  print(double);
+  const list = [1, 3, 4, 6];
+  final even = list.where((value) => value % 2 == 0);
+  final odd = list.where((value) => value % 2 != 0);
+  print(odd);
+  print(even);
 }
