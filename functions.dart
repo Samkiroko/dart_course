@@ -66,12 +66,41 @@ Then, call the function muitiple times with different input values
 // }
 
 /* Name and positional arguments */
-/*Use named arguments to improve code readability  */
+// /*Use named arguments to improve code readability  */
+// void main() {
+//   final person = describe(name: 'Samuel', age: 32);
+//   print(person);
+// }
+
+// String describe({String name, int age}) {
+//   return "My name is $name. I'm $age years old";
+// }
+
+/* Default position arguments*/
+/*
+Exercise: pizza ordering with function
+*/
+
 void main() {
-  final person = describe(name: 'Samuel', age: 32);
-  print(person);
+  const order = ['margherita', 'pepperoni', 'pineapple'];
+  final total = calculateTotal(order);
+  print('Total: \$$total');
 }
 
-String describe({String name, int age}) {
-  return "My name is $name. I'm $age years old";
+/*Creating a function of the above code*/
+
+double calculateTotal(List<String> order) {
+  const pizzaPrices = {
+    'margherita': 5.5,
+    'pepperoni': 7.5,
+    'vegetarian': 6.5,
+  };
+  var total = 0.0;
+  for (var item in order) {
+    final price = pizzaPrices[item];
+    if (price != null) {
+      total += price;
+    }
+  }
+  return total;
 }
