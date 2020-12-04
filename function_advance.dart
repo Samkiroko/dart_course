@@ -100,18 +100,34 @@ and print the result.
 
 */
 
+// void main() {
+//   const list = [1, 2, 4, 5, 17, 19, 49];
+//   final odd = where<int>(list, (value) => value % 2 != 0);
+//   print(odd);
+// }
+
+// List<T> where<T>(List<T> items, bool Function(T) f) {
+//   var result = <T>[];
+//   for (var item in items) {
+//     if (f(item)) {
+//       result.add(item);
+//     }
+//   }
+//   return result;
+// }
+/*Implement the firstWhere fuction*/
+
 void main() {
-  const list = [1, 2, 4, 5, 17, 19, 49];
-  final odd = where<int>(list, (value) => value % 2 != 0);
-  print(odd);
+  const list = [1, 2, 3, 465, 5, 6, 67];
+  final result = firstWhere(list, (x) => x == 5, orElse: () => -1);
+  print(result);
 }
 
-List<T> where<T>(List<T> items, bool Function(T) f) {
-  var result = <T>[];
+T firstWhere<T>(List<T> items, bool Function(T) f, {T Function() orElse}) {
   for (var item in items) {
     if (f(item)) {
-      result.add(item);
+      return item;
     }
   }
-  return result;
+  return orElse();
 }
