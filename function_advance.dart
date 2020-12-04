@@ -41,11 +41,32 @@ Generics
 // }
 
 /*the foreach method*/
+// void main() {
+//   const list = [1, 3, 4];
+//   list.forEach((value) => print(value));
+//   for (var value in list) {
+//     print(value);
+//   }
+// }
 
+/*The map Method*/
+// take a collection and return a new collection
+// void main() {
+//   const list = [1, 3, 4];
+//   list.forEach(print);
+//   final double = list.map((value) => value * 2);
+//   print(double);
+//   // using for loop
+//   final double2 = [];
+//   for (var value in list) {
+//     double2.add(value * 2);
+//   }
+// }
+
+/*Iterable and tolist*/
 void main() {
   const list = [1, 3, 4];
-  list.forEach((value) => print(value));
-  for (var value in list) {
-    print(value);
-  }
+  list.forEach(print);
+  final List<int> double = list.map((value) => value * 2).toList();
+  print(double);
 }
