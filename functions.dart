@@ -81,26 +81,45 @@ Then, call the function muitiple times with different input values
 Exercise: pizza ordering with function
 */
 
-void main() {
-  const order = ['margherita', 'pepperoni', 'pineapple'];
-  final total = calculateTotal(order);
-  print('Total: \$$total');
-}
+// void main() {
+//   const order = ['margherita', 'pepperoni', 'pineapple'];
+//   final total = calculateTotal(order);
+//   print('Total: \$$total');
+// }
 
 /*Creating a function of the above code*/
 
-double calculateTotal(List<String> order) {
-  const pizzaPrices = {
-    'margherita': 5.5,
-    'pepperoni': 7.5,
-    'vegetarian': 6.5,
-  };
-  var total = 0.0;
-  for (var item in order) {
-    final price = pizzaPrices[item];
-    if (price != null) {
-      total += price;
-    }
-  }
-  return total;
-}
+// double calculateTotal(List<String> order) {
+//   const pizzaPrices = {
+//     'margherita': 5.5,
+//     'pepperoni': 7.5,
+//     'vegetarian': 6.5,
+//   };
+//   var total = 0.0;
+//   for (var item in order) {
+//     final price = pizzaPrices[item];
+//     if (price != null) {
+//       total += price;
+//     }
+//   }
+//   return total;
+// }
+
+/*
+Fat arrow notation(=>)
+*/
+
+// void main() {}
+
+// int sum (int x , int y){
+//   return x +y;
+// }
+
+/*Using arrow function */
+
+// int sum(int x, int y) => x + y;
+
+/*
+Global mutable state and function with side effects
+*/
+void main() {}
