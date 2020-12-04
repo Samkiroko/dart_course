@@ -117,17 +117,28 @@ and print the result.
 // }
 /*Implement the firstWhere fuction*/
 
+// void main() {
+//   const list = [1, 2, 3, 465, 5, 6, 67];
+//   final result = firstWhere(list, (x) => x == 5, orElse: () => -1);
+//   print(result);
+// }
+
+// T firstWhere<T>(List<T> items, bool Function(T) f, {T Function() orElse}) {
+//   for (var item in items) {
+//     if (f(item)) {
+//       return item;
+//     }
+//   }
+//   return orElse();
+// }
+
+/*The reduce method*/
 void main() {
-  const list = [1, 2, 3, 465, 5, 6, 67];
-  final result = firstWhere(list, (x) => x == 5, orElse: () => -1);
-  print(result);
+  const list = [1, 2, 3, 4];
+  final sum = list.reduce((value, element) => value + element);
+  print(sum);
 }
 
-T firstWhere<T>(List<T> items, bool Function(T) f, {T Function() orElse}) {
-  for (var item in items) {
-    if (f(item)) {
-      return item;
-    }
-  }
-  return orElse();
-}
+// Reduce combines all items inside a collection and produce a single result
+// slightly less intuitive to use than a for loop
+//  => Use it if you inderstand it 🐶
